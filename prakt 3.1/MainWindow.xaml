@@ -1,0 +1,36 @@
+﻿<Window x:Class="prakt_3._1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prakt_3._1"
+        mc:Ignorable="d"
+        Title="Практическая работа №3" Height="400.5" Width="449" ResizeMode="CanMinimize" Icon="TeamViewer.ico">
+    <Grid>
+        <Menu VerticalAlignment="Top">
+            <MenuItem Header="Файл">
+                <MenuItem Header="Открыть" Click="OpenMatrix"></MenuItem>
+                <MenuItem Header="Сохранить таблицу" Click="SaveMatrix"></MenuItem>
+                <Separator></Separator>
+                <MenuItem Header="Выход" Click="Exit"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="О программе" Click="Info"></MenuItem>
+        </Menu>
+        <DataGrid  x:Name="dataGrid" HorizontalAlignment="Left" Height="152" Margin="34,41,0,0" VerticalAlignment="Top" Width="383" CanUserAddRows="False" CellEditEnding="DataGrid_CellEditEnding"/>
+        <TextBox  x:Name="columnOut" HorizontalAlignment="Left" Height="23" Margin="34,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="numberMin" HorizontalAlignment="Left" Height="23" Margin="191,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="numberMax" HorizontalAlignment="Left" Height="23" Margin="191,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59"/>
+        <TextBox x:Name="resultOut" HorizontalAlignment="Left" Height="23" Margin="297,214,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" IsReadOnly="True"/>
+        <Button Content="Решение" HorizontalAlignment="Left" Margin="297,257,0,0" VerticalAlignment="Top" Width="120" Click="MainOperation"/>
+        <Button Content="Создать" HorizontalAlignment="Left" Margin="34,311,0,0" VerticalAlignment="Top" Width="120" Click="Create"/>
+        <Button Content="Заполнить" HorizontalAlignment="Left" Margin="34,336,0,0" VerticalAlignment="Top" Width="120" Click="FillDataGrid"/>
+        <Button Content="Очистить" HorizontalAlignment="Left" Margin="297,290,0,0" VerticalAlignment="Top" Width="120" Click="Clear"/>
+        <Label Content="кол-во колонок" HorizontalAlignment="Left" Margin="34,234,0,0" VerticalAlignment="Top"/>
+        <Label Content="Диапазон" HorizontalAlignment="Left" Margin="191,193,0,0" VerticalAlignment="Top"/>
+        <Label Content="MIN" HorizontalAlignment="Left" Margin="191,234,0,0" VerticalAlignment="Top"/>
+        <Label Content="MAX" HorizontalAlignment="Left" Margin="191,280,0,0" VerticalAlignment="Top"/>
+        <Button Content="Выход" HorizontalAlignment="Left" Margin="176,318,0,0" VerticalAlignment="Top" Width="108" Click="Exit"/>
+        <TextBox x:Name="rowOut" HorizontalAlignment="Left" Height="23" Margin="34,257,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="кол-во строк" HorizontalAlignment="Left" Margin="34,280,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

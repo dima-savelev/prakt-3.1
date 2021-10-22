@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30717.126
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prakt 3.1", "prakt 3.1\prakt 3.1.csproj", "{691EE3BB-4570-4EDD-992C-A644A4134DEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibMas", "LibMas\LibMas.csproj", "{C119DA43-D14A-4AFD-8EDB-1C9B0EA28625}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lib_13", "Lib_13\Lib_13.csproj", "{A4A63E1C-4F90-4474-A8B0-DBEE4228B1D8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{691EE3BB-4570-4EDD-992C-A644A4134DEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{691EE3BB-4570-4EDD-992C-A644A4134DEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{691EE3BB-4570-4EDD-992C-A644A4134DEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{691EE3BB-4570-4EDD-992C-A644A4134DEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C119DA43-D14A-4AFD-8EDB-1C9B0EA28625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C119DA43-D14A-4AFD-8EDB-1C9B0EA28625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C119DA43-D14A-4AFD-8EDB-1C9B0EA28625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C119DA43-D14A-4AFD-8EDB-1C9B0EA28625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4A63E1C-4F90-4474-A8B0-DBEE4228B1D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4A63E1C-4F90-4474-A8B0-DBEE4228B1D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4A63E1C-4F90-4474-A8B0-DBEE4228B1D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4A63E1C-4F90-4474-A8B0-DBEE4228B1D8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E6D29F42-43B4-4EE9-A505-EC475159BE7E}
+	EndGlobalSection
+EndGlobal
