@@ -31,13 +31,17 @@ namespace prakt_3._1
 
         private void Create(object sender, RoutedEventArgs e)
         {
-            if (!int.TryParse(columnOut.Text, out int column)) return;
-            if (!int.TryParse(rowOut.Text, out int row)) return;
-            if (column > 0 && row > 0)
+            try
             {
+                int column = Convert.ToInt32(columnOut.Text);
+                int row = Convert.ToInt32(rowOut.Text);
                 _matrix = new int[row, column];
                 dataGrid.ItemsSource = VisualArray.ToDataTable(_matrix).DefaultView;
                 resultOut.Clear();
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -50,15 +54,19 @@ namespace prakt_3._1
 
         private void FillDataGrid(object sender, RoutedEventArgs e)
         {
-            if (!int.TryParse(numberMin.Text, out int minimum)) return;
-            if (!int.TryParse(numberMax.Text, out int maximum)) return;
-            if (!int.TryParse(columnOut.Text, out int column)) return;
-            if (!int.TryParse(rowOut.Text, out int row)) return;
-            if (maximum > minimum && column > 0 && row > 0)
+            try
             {
+                int column = Convert.ToInt32(columnOut.Text);
+                int row = Convert.ToInt32(rowOut.Text);
+                int minimum = Convert.ToInt32(numberMin.Text);
+                int maximum = Convert.ToInt32(numberMax.Text);
                 _matrix = new int[row, column];
                 MatrixOperation.FillRandomValues(_matrix, minimum, maximum);
                 dataGrid.ItemsSource = VisualArray.ToDataTable(_matrix).DefaultView;
+            }
+            catch
+            {
+                MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
@@ -69,7 +77,7 @@ namespace prakt_3._1
             //Определяем номер строки
             int indexRow = e.Row.GetIndex();
             //Проверяем правильное значение ввел пользователь
-            if (!int.TryParse(((TextBox)e.EditingElement).Text.Replace('.', ','), out int value))
+            if (!int.TryParse(((TextBox)e.EditingElement).Text, out int value))
             {
                 MessageBox.Show("Введены неверные данные", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
